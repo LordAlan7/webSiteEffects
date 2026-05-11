@@ -1,0 +1,154 @@
+/* css/bubble.css */
+.section-bubble {
+  background-color: var(--bubble-bg); /* #00111A */
+  color: var(--color-text);
+}
+
+.machine-title--bubble {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 0.9;
+  background: radial-gradient(circle, var(--bubble-foam) 0%, var(--bubble-primary) 60%, var(--bubble-deep) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback */
+}
+
+.machine-card--bubble {
+  border-top: 3px solid var(--bubble-primary);
+}
+
+.btn--bubble {
+  background: var(--bubble-primary);
+  color: #000;
+  border-color: var(--bubble-primary);
+}
+
+.btn--bubble:hover {
+  background: var(--bubble-deep);
+  box-shadow: var(--shadow-bubble);
+  transform: translateY(-2px);
+}
+
+/* Bubble Specific Toggle */
+.effect-toggle {
+  display: inline-flex;
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  gap: 4px;
+  margin-top: var(--space-4);
+}
+
+.effect-toggle__option {
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  color: var(--color-muted);
+  border: none;
+  background: transparent;
+}
+
+.effect-toggle__option.active {
+  background: var(--bubble-primary);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.5);
+}
+
+/* Specs Grid - Bubble Variation */
+.spec-item--bubble {
+  border-left-color: var(--bubble-primary);
+}
+
+/* CSS Animation for background bubbles container */
+.bubbles-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* Let interactions pass to content */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 180, 216, 0.2) 60%, rgba(0, 180, 216, 0.5) 100%);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: bubbleFloat 10s linear infinite;
+  opacity: 0;
+}
+
+/* Smoke Modifiers via toggle state via JS adding a class */
+.has-smoke .bubble {
+  background: radial-gradient(circle at center, rgba(202, 240, 248, 0.8), rgba(0, 180, 216, 0.4) 80%);
+  filter: blur(1px); /* Slight blur to simulate internal smoke density */
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-25vh) translateX(15px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(-10px) scale(1.1);
+  }
+  75% {
+    transform: translateY(-75vh) translateX(20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(0) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Demo Container */
+.bubble-demo-area {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #00111A;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble-demo-overlay-text {
+  position: absolute;
+  color: var(--bubble-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity var(--duration-fast);
+}
+
+.bubble-demo-area:hover .bubble-demo-overlay-text {
+  opacity: 1;
+}
+
+#bubbleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

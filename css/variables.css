@@ -1,0 +1,115 @@
+:root {
+  /* ── COLORES BASE ──────────────────────────────── */
+  --color-void: #0a0a0f;
+  --color-dark: #12121e;
+  --color-card: #1a1a2e;
+  --color-surface: #1e1e38;
+  --color-border: #2a2a44;
+  --color-muted: #6c7a89;
+  --color-text: #e8e8f0;
+  --color-white: #ffffff;
+
+  /* ── SPARKULAR ─────────────────────────────────── */
+  --spark-primary: #f5a623;
+  --spark-hot: #ff6b00;
+  --spark-glow: #ffd166;
+  --spark-dim: #8b5a00;
+  --spark-bg: #1c1000;
+
+  /* ── BUBBLE MACHINE ────────────────────────────── */
+  --bubble-primary: #00b4d8;
+  --bubble-deep: #0077b6;
+  --bubble-foam: #90e0ef;
+  --bubble-mist: #caf0f8;
+  --bubble-bg: #00111a;
+
+  /* ── ESTADOS ───────────────────────────────────── */
+  --color-success: #27ae60;
+  --color-warning: #f5a623;
+  --color-error: #c0392b;
+  --color-info: #00b4d8;
+  --color-whatsapp: #25d366;
+
+  /* ── TIPOGRAFÍA ────────────────────────────────── */
+  --font-display: "Bebas Neue", "Impact", sans-serif;
+  --font-heading: "Montserrat", "Arial Black", sans-serif;
+  --font-body: "Inter", "Poppins", "Arial", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 5rem;
+  --text-hero: clamp(3rem, 8vw, 6rem);
+
+  /* ── ESPACIADO ─────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-hero: clamp(4rem, 10vh, 8rem);
+
+  /* ── BREAKPOINTS ───────────────────────────────── */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+
+  /* ── LAYOUT ────────────────────────────────────── */
+  --container-max: 1200px;
+  --container-pad: clamp(1rem, 5vw, 2rem);
+  --grid-machines: repeat(auto-fit, minmax(300px, 1fr));
+  --grid-gallery: repeat(auto-fill, minmax(240px, 1fr));
+
+  /* ── BORDES ────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── SOMBRAS Y GLOW ────────────────────────────── */
+  --shadow-spark:
+    0 0 20px rgba(245, 166, 35, 0.4), 0 0 60px rgba(245, 166, 35, 0.15);
+  --shadow-bubble:
+    0 0 20px rgba(0, 180, 216, 0.4), 0 0 60px rgba(0, 180, 216, 0.15);
+  --shadow-light:
+    0 0 20px rgba(199, 21, 133, 0.4), 0 0 60px rgba(199, 21, 133, 0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.6);
+
+  /* ── TRANSICIONES ──────────────────────────────── */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-lazy: 800ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-INDEX STACK ─────────────────────────────── */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-floating: 500; /* Botón WhatsApp */
+  --z-toast: 600;
+}

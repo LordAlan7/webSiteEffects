@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efectos Especiales para Eventos | Momentos Inolvidables</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Renta de máquinas de efectos especiales para eventos: Sparkular (chispas frías) y Bubble Machines. Haz de tu evento un momento inolvidable.">
+  <meta name="keywords" content="renta sparkular, máquina de chispas, chispas frías boda, bubble machine eventos, efectos especiales, DJ bodas">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sparkular.css">
+  <link rel="stylesheet" href="css/bubble.css">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="assets/flex_logo.png" alt="Special Effects Logo" width="150" height="auto" />
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav">
+        <a href="#sparkular" class="nav__link">Sparkular</a>
+        <a href="#bubble" class="nav__link">Bubble Machine</a>
+        <a href="#galeria" class="nav__link">Galería</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-menu">
+     <button class="nav-toggle nav-toggle--close" aria-label="Cerrar menú" style="position:absolute; top:20px; right:20px;">
+        <i class="fa-solid fa-xmark"></i>
+     </button>
+     <a href="#sparkular" class="nav__link">Sparkular</a>
+     <a href="#bubble" class="nav__link">Bubble Machine</a>
+     <a href="#galeria" class="nav__link">Galería</a>
+     <a href="#contacto" class="nav__link">Contacto</a>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+      <!-- As there is no general hero background video provided, we use a dark gradient color mixed with the base dark color for now -->
+      <div class="hero__bg" style="background: url('assets/hero_background.png') center/cover no-repeat;"></div>
+      <div class="hero__overlay"></div>
+      
+      <div class="container hero__content fade-in-up">
+        <span class="tagline">No vendemos máquinas. Vendemos el momento que nadie olvida.</span>
+        <h1 class="hero__title">Efectos Especiales <br>para tu Evento</h1>
+        
+        <div class="hero__actions mt-8">
+          <a href="#sparkular" class="btn btn--xl btn--sparkular"><i class="fa-solid fa-bolt"></i> Ver Efectos</a>
+          <a href="#contacto" class="btn btn--lg btn--ghost"><i class="fa-regular fa-calendar-check"></i> Cotiza tu evento</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-transition--hero-spark"></div>
+
+    <!-- SPARKULAR SECTION -->
+    <section id="sparkular" class="section-sparkular">
+      <div class="container split-content">
+        <!-- Text Content -->
+        <div class="split-content__text fade-in-up">
+          <div class="safety-badge mb-4">
+            <i class="fa-solid fa-shield-halved"></i> Chispas en frío — 100% Seguro
+          </div>
+          
+          <h2 class="machine-title--sparkular mb-4">Sparkular</h2>
+          <p class="text-lg">Produce una lluvia espectacular de chispas controladas. Ideal para entradas, primeros bailes y momentos de revelación. Crea el momento visual más impactante de la noche.</p>
+          
+          <div class="specs-grid mb-8">
+            <div class="spec-item">
+              <span class="spec-label">Altura máx.</span>
+              <span class="spec-value">3–5 metros</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Temperatura</span>
+              <span class="spec-value">En frío (No quema)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Duración</span>
+              <span class="spec-value">15 - 90s por ráfaga</span>
+            </div>
+             <div class="spec-item">
+              <span class="spec-label">Uso</span>
+              <span class="spec-value">Apto para interiores</span>
+            </div>
+          </div>
+
+          <a href="#contacto" class="btn btn--lg btn--sparkular"><i class="fa-brands fa-whatsapp"></i> Quiero esto en mi evento</a>
+        </div>
+        
+        <!-- Interactive Demo / Video -->
+        <div class="split-content__media fade-in-up" style="transition-delay: 200ms;">
+           <div class="split-content__video-wrapper mb-4">
+              <!-- Using the provided mp4 -->
+              <video src="./assets/sparkularLoop.mp4" autoplay loop muted playsinline aria-label="Sparkular machine in action"></video>
+           </div>
+           
+           <h3 class="mt-8 mb-4 text-center" style="color: var(--spark-primary);">Prueba el Efecto</h3>
+           <div class="sparkular-demo-area" id="sparkularDemoArea">
+             <canvas id="sparkularCanvas"></canvas>
+             <div class="sparkular-demo-overlay-text">Haz clic aquí para disparar chispas</div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-transition--spark-bubble"></div>
+
+    <!-- BUBBLE SECTION -->
+    <section id="bubble" class="section-bubble">
+      
+      <!-- Background Bubbles Animation container -->
+      <div class="bubbles-bg-container" id="bubblesBgContainer"></div>
+
+      <div class="container split-content split-content--reverse">
+         
+         <!-- Text Content -->
+         <div class="split-content__text fade-in-up">
+            <h2 class="machine-title--bubble mb-4">Bubble Machine</h2>
+            <p class="text-lg">La magia visual más fotogénica. Nuestras burbujas, combinadas con humo opcional, crean imágenes y videos únicos que se vuelven virales en redes sociales.</p>
+            
+            <div class="effect-toggle" id="bubbleToggle">
+               <button class="effect-toggle__option active" data-effect="normal">Burbujas</button>
+               <button class="effect-toggle__option" data-effect="smoke">Con Humo</button>
+            </div>
+
+            <div class="specs-grid mt-6 mb-8">
+               <div class="spec-item spec-item--bubble">
+                  <span class="spec-label">Cobertura</span>
+                  <span class="spec-value">Radio 4–8 metros</span>
+               </div>
+               <div class="spec-item spec-item--bubble">
+                  <span class="spec-label">Fluido</span>
+                  <span class="spec-value">Premium, no tóxico</span>
+               </div>
+               <div class="spec-item spec-item--bubble">
+                  <span class="spec-label">Humo (Opc.)</span>
+                  <span class="spec-value">Inodoro, no activa alarmas</span>
+               </div>
+               <div class="spec-item spec-item--bubble">
+                 <span class="spec-label">Seguridad</span>
+                 <span class="spec-value">No mancha, no resbala</span>
+               </div>
+            </div>
+
+            <a href="#contacto" class="btn btn--lg btn--bubble"><i class="fa-brands fa-whatsapp"></i> Haz tu evento viral</a>
+         </div>
+
+         <!-- Media Content -->
+         <div class="split-content__media fade-in-up" style="transition-delay: 200ms;">
+             <div class="split-content__video-wrapper">
+                <!-- Using the provided mp4 -->
+                <video id="bubbleVideo" src="./assets/LoopBubble.mp4" autoplay loop muted playsinline aria-label="Bubble machine in action"></video>
+             </div>
+             
+             <div class="mt-4 text-center mb-8">
+               <span class="safety-badge" style="background: rgba(0, 180, 216, 0.15); border-color: var(--bubble-primary); color: var(--bubble-primary);">
+                 <i class="fa-solid fa-circle-check"></i> Seguro para vestidos y pistas
+               </span>
+             </div>
+             
+             <h3 class="mt-8 mb-4 text-center" style="color: var(--bubble-primary);">Prueba el Efecto</h3>
+             <div class="bubble-demo-area" id="bubbleDemoArea">
+               <canvas id="bubbleCanvas"></canvas>
+               <div class="bubble-demo-overlay-text">Haz clic aquí para lanzar burbujas</div>
+             </div>
+         </div>
+      </div>
+    </section>
+
+    <div class="section-transition--bubble-gallery"></div>
+    
+    <!-- GALLERY (Placeholder for layout demonstration) -->
+    <section id="galeria" style="background-color: var(--color-dark);">
+      <div class="container text-center fade-in-up">
+        <h2>Galería de Eventos</h2>
+        <span class="tagline">Prueba Social</span>
+        <p class="mt-4 text-muted">Mira la magia que creamos en eventos reales. (Imágenes de muestra)</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-4); margin-top: var(--space-8);">
+           <!-- Gallery items -->
+           <div style="aspect-ratio: 1; background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden;"><img src="./assets/gallery/placeholder_bubblemachine.jpg" alt="Bubble Machine en evento" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+           <div style="aspect-ratio: 1; background: var(--color-card); border-radius: var(--radius-md); overflow: hidden;"><img src="./assets/gallery/placeholder2_sparkular.jpg" alt="Sparkular en evento" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+           <div style="aspect-ratio: 1; background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden;"><img src="./assets/gallery/placeholder2_bubblemachine.jpg" alt="Bubble Machine en evento" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+           <div style="aspect-ratio: 1; background: var(--color-card); border-radius: var(--radius-md); overflow: hidden;"><img src="./assets/gallery/placeholder_sparkular.jpg" alt="Sparkular en evento" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="section-transition--gallery-contact"></div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" style="background-color: var(--color-void);">
+      <div class="container text-center fade-in-up">
+        <h2 class="mb-4">Reserva tu Fecha</h2>
+        <p class="mb-8" style="max-width: 600px; margin-inline: auto;">Disponibilidad limitada. Asegura los efectos especiales para tu evento hoy mismo.</p>
+        
+        <form id="contactForm" action="https://formspree.io/f/myknorke" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left; background: var(--color-card); padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+          <div class="mb-4">
+             <label style="display:block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-sm); color: var(--color-muted);">Nombre / Apellido</label>
+             <input type="text" name="nombre" style="width: 100%; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text);" required placeholder="Tu nombre">
+          </div>
+          <div class="mb-4">
+             <label style="display:block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-sm); color: var(--color-muted);">Email</label>
+             <input type="email" name="email" style="width: 100%; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text);" required placeholder="Tu email">
+          </div>
+          <div class="mb-4">
+             <label style="display:block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-sm); color: var(--color-muted);">Teléfono</label>
+             <input type="text" name="telefono" style="width: 100%; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text);" required placeholder="Tu teléfono">
+          </div>
+          <div class="mb-4">
+             <label style="display:block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-sm); color: var(--color-muted);">Efecto de interés</label>
+             <select name="efecto" style="width: 100%; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text);">
+                <option value="sparkular">Sparkular</option>
+                <option value="bubble">Bubble Machine</option>
+                <option value="ambos">Ambos</option>
+             </select>
+          </div>
+          <div class="mb-8">
+             <label style="display:block; margin-bottom: 8px; font-weight: 600; font-size: var(--text-sm); color: var(--color-muted);">Fecha de Evento</label>
+             <input type="date" name="fecha_evento" style="width: 100%; padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text);">
+          </div>
+          <button type="submit" class="btn btn--lg btn--ghost" style="width: 100%; justify-content:center; background: var(--color-surface); color: var(--color-text);">Enviar Cotización</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <img src="assets/flex_logo.png" alt="Special Effects Logo" width="100" style="margin: 0 auto; opacity: 0.5;" class="mb-4" />
+      <p class="text-sm text-muted">© 2026 Flex Effects. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/+526183716204" target="_blank" rel="noopener noreferrer" class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Success Toast Notification -->
+  <div id="successToast" style="
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(120px);
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid var(--spark-primary, #f5a623);
+    color: #fff;
+    padding: 18px 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 9999;
+    transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1), opacity 0.45s ease;
+    opacity: 0;
+    pointer-events: none;
+  ">
+    <span style="font-size: 1.5rem;">✅</span>
+    <div>
+      <div style="font-size: 1.05rem;">¡Cotización enviada!</div>
+      <div style="font-size: 0.82rem; color: #aaa; font-weight: 400; margin-top: 2px;">Te contactaremos pronto. 🎉</div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/sparkular-demo.js"></script>
+  <script src="js/bubble-animation.js"></script>
+  <script>
+    // Formspree AJAX submit + toast notification
+    const contactForm = document.getElementById('contactForm');
+    const successToast = document.getElementById('successToast');
+
+    function showToast() {
+      successToast.style.opacity = '1';
+      successToast.style.transform = 'translateX(-50%) translateY(0)';
+      successToast.style.pointerEvents = 'auto';
+      setTimeout(() => {
+        successToast.style.opacity = '0';
+        successToast.style.transform = 'translateX(-50%) translateY(120px)';
+        successToast.style.pointerEvents = 'none';
+      }, 4500);
+    }
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          contactForm.reset();
+          showToast();
+        } else {
+          alert('Hubo un error al enviar. Intenta de nuevo.');
+        }
+      } catch (err) {
+        alert('Sin conexión. Revisa tu internet e intenta de nuevo.');
+      }
+    });
+  </script>
+</body>
+</html>
